@@ -32,11 +32,8 @@ class ViewController: UIViewController {
                 student.gradeArray[1] = segundo
                 student.gradeArray[2] = terceiro
                 
-                func sumArray(array:Float) -> Float {
-                    let sumArray = (student.gradeArray[0]) + (student.gradeArray[1]) + (student.gradeArray[2])
-                }
                 
-                grade = sumArray / 3.0
+                grade = sumArray(array: student.gradeArray) / 3.0
                 showResult()
             }else{
                 let erro = "Insira uma nota entre 0 e 10"
@@ -47,6 +44,16 @@ class ViewController: UIViewController {
         
     }
   
+    func sumArray(array:[Float]) -> Float {
+        return array[0] + array[1] + array[2]
+    }
+    
+    
+    
+    
+    
+    
+    
     func showResult(){
         var text: String = ""
         switch grade {
@@ -62,7 +69,6 @@ class ViewController: UIViewController {
         lbconcept.text = "\(String(format: "%.2f", grade)) : \(text)"
     }
 
-    
     
     
     override func viewDidLoad() {
