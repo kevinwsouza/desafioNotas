@@ -13,9 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbTTrimestre: UITextField!
     @IBOutlet weak var lbconcept: UILabel!
     @IBOutlet weak var lbStudentName: UILabel!
+    @IBOutlet weak var lbStudentGrade: UILabel!
     
+   
     var grade: Float = 0
     var student = Student(nameStudent: "", scholarGrade: 0, gradeArray: [])
+    var tfNameSV = " "
+    var tfGradeSV = " "
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -27,10 +31,10 @@ class ViewController: UIViewController {
                 
             if ((primeiro >= 0 && primeiro <= 10) && (segundo >= 0 && segundo <= 10) && (terceiro >= 0 && terceiro <= 10)){
               
-                
-                student.gradeArray[0] = primeiro
-                student.gradeArray[1] = segundo
-                student.gradeArray[2] = terceiro
+                student.gradeArray.removeAll()
+                student.gradeArray.append(primeiro)
+                student.gradeArray.append(segundo)
+                student.gradeArray.append(terceiro)
                 
                 
                 grade = sumArray(array: student.gradeArray) / 3.0
@@ -48,12 +52,6 @@ class ViewController: UIViewController {
         return array[0] + array[1] + array[2]
     }
     
-    
-    
-    
-    
-    
-    
     func showResult(){
         var text: String = ""
         switch grade {
@@ -64,9 +62,9 @@ class ViewController: UIViewController {
         default:
             text = "Aprovado"
         }
-        lbStudentName.text = "O" + "\(String(student.nameStudent))" + "está"
-        
+        lbStudentName.text = "O " + "\(String(tfNameSV))" + " está"
         lbconcept.text = "\(String(format: "%.2f", grade)) : \(text)"
+        lbStudentGrade.text = "\(String(tfGradeSV))ª " + "Série"
     }
 
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IXL-HJ-lfE">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -30,8 +30,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="btSignIn:" destination="IXL-HJ-lfE" eventType="touchUpInside" id="Dqn-JW-2Vr"/>
-                                    <action selector="btcheck:" destination="qKo-ft-vdM" eventType="touchUpInside" id="9hZ-vT-KM9"/>
-                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oaR-tX-gDY"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="segueGrades" id="5qW-dS-w15"/>
                                 </connections>
                             </button>
@@ -72,8 +70,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qko-iD-2sh">
-                                <rect key="frame" x="166" y="484" width="59" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Erro:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qko-iD-2sh">
+                                <rect key="frame" x="158" y="482" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -92,7 +90,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btSignIn" destination="BPj-Ze-gFE" id="UTf-Ci-kpZ"/>
                         <outlet property="tfGradeStudent" destination="erw-QP-Nvt" id="gt4-8t-YdZ"/>
                         <outlet property="tfNameStudent" destination="RQM-Ob-bMo" id="60M-NO-FhD"/>
                     </connections>
@@ -163,7 +160,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aprovado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBD-iq-bLy">
-                                <rect key="frame" x="16" y="332" width="343" height="50"/>
+                                <rect key="frame" x="16" y="314" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mfU-Mi-oOS"/>
                                 </constraints>
@@ -172,7 +169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkW-Ki-9lR">
-                                <rect key="frame" x="16" y="412" width="343" height="30"/>
+                                <rect key="frame" x="16" y="394" width="343" height="30"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZxF-mc-8Hu"/>
@@ -191,8 +188,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O aluno está" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5if-H3-NOY">
-                                <rect key="frame" x="16" y="254" width="343" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <rect key="frame" x="16" y="254" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ª série" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmd-GD-JL5">
+                                <rect key="frame" x="16" y="467" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -207,10 +210,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PBD-iq-bLy" secondAttribute="trailing" constant="16" id="RKs-Fm-uj5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5if-H3-NOY" secondAttribute="trailing" constant="16" id="V0r-Mg-njh"/>
                             <constraint firstItem="5if-H3-NOY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Y9x-MH-7FP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lmd-GD-JL5" secondAttribute="trailing" constant="16" id="ZyB-rC-DNU"/>
+                            <constraint firstItem="Lmd-GD-JL5" firstAttribute="top" secondItem="jkW-Ki-9lR" secondAttribute="bottom" constant="43" id="bDm-Zz-qBX"/>
                             <constraint firstItem="PBD-iq-bLy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bhB-Zg-Wxc"/>
                             <constraint firstItem="au5-pN-iGV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dGL-9Y-IHK"/>
                             <constraint firstItem="au5-pN-iGV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="haY-le-vJ7"/>
                             <constraint firstItem="jkW-Ki-9lR" firstAttribute="top" secondItem="PBD-iq-bLy" secondAttribute="bottom" constant="30" id="hrE-cr-BBB"/>
+                            <constraint firstItem="Lmd-GD-JL5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lmf-lF-Fbs"/>
                             <constraint firstItem="5if-H3-NOY" firstAttribute="top" secondItem="au5-pN-iGV" secondAttribute="bottom" constant="50" id="u02-HW-Yci"/>
                         </constraints>
                     </view>
@@ -218,6 +224,7 @@
                     <connections>
                         <outlet property="lbPTrimestre" destination="y2f-xs-ieP" id="uhW-PR-K1S"/>
                         <outlet property="lbSTrimestre" destination="Tkb-0F-XWA" id="gQb-UI-DnG"/>
+                        <outlet property="lbStudentGrade" destination="Lmd-GD-JL5" id="ZzS-cZ-mqt"/>
                         <outlet property="lbStudentName" destination="5if-H3-NOY" id="YHV-6M-pcv"/>
                         <outlet property="lbTTrimestre" destination="4h7-yc-FRd" id="5rC-xT-hON"/>
                         <outlet property="lbconcept" destination="PBD-iq-bLy" id="7ZJ-6B-CHg"/>
