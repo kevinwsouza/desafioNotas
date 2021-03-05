@@ -28,6 +28,7 @@ class StartViewController: UIViewController {
             
             let erro = "Insira Nome de aluno ou Série Válidos"
             lbErro.text = "\(erro)"
+            lbErro.isHidden = false
         }
     }
     
@@ -41,6 +42,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lbErro.isHidden = true
 
         // Do any additional setup after loading the view.
     }

@@ -43,7 +43,7 @@ class ViewController: UIViewController {
                 let erro = "Insira uma nota entre 0 e 10"
                 lbconcept.text = "\(erro)"
             }
-            
+            lbconcept.isHidden = false
         }
         
     }
@@ -65,12 +65,18 @@ class ViewController: UIViewController {
         lbStudentName.text = "O " + "\(String(tfNameSV))" + " está"
         lbconcept.text = "\(String(format: "%.2f", grade)) : \(text)"
         lbStudentGrade.text = "\(String(tfGradeSV))ª " + "Série"
+        
+        lbStudentGrade.isHidden = false
+        lbStudentName.isHidden = false
     }
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lbconcept.isHidden = true
+        lbStudentGrade.isHidden = true
+        lbStudentName.isHidden = true
         // Do any additional setup after loading the view.
     }
     
