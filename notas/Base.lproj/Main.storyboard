@@ -90,6 +90,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lbErro" destination="qko-iD-2sh" id="o8U-Bp-sRK"/>
                         <outlet property="tfGradeStudent" destination="erw-QP-Nvt" id="gt4-8t-YdZ"/>
                         <outlet property="tfNameStudent" destination="RQM-Ob-bMo" id="60M-NO-FhD"/>
                     </connections>

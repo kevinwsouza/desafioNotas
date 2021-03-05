@@ -9,6 +9,7 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    
     @IBOutlet weak var lbErro: UILabel!
     @IBOutlet weak var tfNameStudent: UITextField!
     @IBOutlet weak var tfGradeStudent: UITextField!
@@ -20,7 +21,7 @@ class StartViewController: UIViewController {
     @IBAction func btSignIn(_ sender: Any) {
         self.nameText = tfNameStudent.text!
         self.gradeText = tfGradeStudent.text!
-        if String(tfNameStudent.text!) != " ", Int(tfGradeStudent.text!) != nil{
+        if String(tfNameStudent.text!) != " " , Int(tfGradeStudent.text!) != nil{
             performSegue(withIdentifier: "segueGrades", sender: self)
             
         } else {
