@@ -33,7 +33,7 @@ class StartViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var vc = segue.destination as! ViewController
+        let vc = segue.destination as! ViewController
         vc.tfNameSV = self.nameText
         vc.tfGradeSV = self.gradeText
     }
